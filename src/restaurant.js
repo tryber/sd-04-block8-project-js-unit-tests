@@ -73,6 +73,27 @@
 
 const createMenu = (menu) => ({
   fetchMenu: menu,
+  consumption: [],
+  order: orderFromMenu,
+  pay: payFromMenu,
 });
+
+function orderFromMenu(pedido) {
+  this.consumption.push(pedido);
+}
+
+function payFromMenu() {
+  let result = 0;
+  const menu = Object.values(this.fetchMenu);
+  for (let i = 0; i < this.consumption.length; i += 1) {
+    for (let menuI = 0; menuI < menu.length; menuI += 1) {
+      if (menu[menuI].hasOwnProperty(this.consumption[i])){
+        result += menu[menuI][this.consumption[i]];
+        break;
+      }
+    }
+  }
+  return result + (result * 0.1);
+}
 
 module.exports = createMenu;

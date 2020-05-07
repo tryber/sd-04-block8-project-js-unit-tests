@@ -14,12 +14,12 @@
 
 const average = (arr) => {
   let somatoria = 0;
-  if(arr === 'null' || arr.length === 0) return undefined;
+  if (arr === 'null' || arr.length === 0) return undefined;
   for (let i = 0; i < arr.length; i += 1) {
     if (typeof arr[i] !== 'number') return undefined;
     somatoria += arr[i];
   }
-  return Math.round(somatoria/arr.length);
+  return Math.round(somatoria / arr.length);
 };
 
 module.exports = average;

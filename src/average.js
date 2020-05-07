@@ -13,11 +13,13 @@
 */
 
 const average = (arr) => {
-  if (!arr.some((item) => typeof item !== 'number') && arr.length > 0) {
+  if (!arr.some(item => typeof item !== 'number') && arr.length > 0) {
     const sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     const result = Math.round(sum / arr.length);
     return result;
-  } else return undefined;
+  }
+
+  return undefined;
 };
 
 module.exports = average;

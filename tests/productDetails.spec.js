@@ -35,7 +35,7 @@ describe('#productDetails', () => {
     //assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     const product = productDetails('oculos', 'mascaras');
-    const teste = product[0].details.productId;
+    //const teste = product[0].details.productId;
     // Teste que o retorno da função é um array.
     assert.strictEqual(typeof product, 'object')
     // Teste que o array retornado pela função contém dois itens dentro.
@@ -45,6 +45,7 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.deepStrictEqual(product[0] !== product[1], true)
     // (Difícil) Teste que os dois productIds terminam com 123.
-    //assert.deepEqual(teste.slice(teste.length-4) == '123', true)
+    assert.deepEqual(product[0].details.productId.slice(product[0].details.productId.length-3), '123');
+    assert.deepEqual(product[1].details.productId.slice(product[0].details.productId.length-3), '123');
   });
 });

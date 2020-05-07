@@ -16,18 +16,17 @@ const average = (array) => {
   let media = 0;
   let soma = 0;
 
-   if(array.length === 0){
-   return undefined;
-   }
-  for(let i=0; i< array.length; i+=1){
-    soma+=array[i];
-    if(typeof array[i] !== 'number'){
+  if (array.length === 0) {
     return undefined;
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    soma += array[i];
+    if (typeof array[i] !== 'number') {
+      return undefined;
     }
   }
-  media = (soma/array.length);
+  media = (soma / array.length);
   return Math.round(media);
-}
+};
 
-console.log(average([1,3,'4']));
 module.exports = average;

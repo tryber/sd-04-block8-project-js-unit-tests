@@ -83,6 +83,7 @@ function getItemPrice(item, menu) {
       return menuVal[i][item];
     }
   }
+  return 0;
 }
 
 function payFromMenu() {

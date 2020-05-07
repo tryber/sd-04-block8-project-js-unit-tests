@@ -15,15 +15,12 @@
 const average = (obj) => {
   if (obj.length === 0) return undefined;
   let total = 0;
-  for(i = 0; i < obj.length; i++){
-      if (typeof obj[i] != 'number') {
+  for (i = 0; i < obj.length; i+= 1) {
+    if (typeof obj[i] !== 'number') {
         return undefined;
       }
       total += obj[i];
   }
-  return Math.round(total/obj.length);
+  return Math.round(total / obj.length);
 };
-
-
-
 module.exports = average;

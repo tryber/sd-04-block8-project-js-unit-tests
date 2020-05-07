@@ -14,15 +14,13 @@
 
 const average = (arr) => {
   let average = 0;
+  if (arr.length === 0) return undefined;
   for (let i in arr) {
-    if (typeof arr[i] === 'number') {
-      average += arr[i];
-    } else {
-      return undefined;
-    }
+    if (typeof arr[i] !== 'number') return undefined;
+    average += arr[i];
   }
   average /= arr.length;
-  return average;
+  return Math.floor(average);
 };
 
 module.exports = average;

@@ -13,20 +13,20 @@
 */
 
 const average = (array) => {
-  if (array === []) {
-    return undefined;
-  }
   for (i = 0; i < array.length; i += 1) {
-    if (typeof (array[i]) === 'string') {
-      return undefined;
-    }
+  if (typeof array[i] === 'string') {
+  return undefined;
+  }
+  }
+  if (array.length === 0) {
+  return undefined;
   }
   const media = array.reduce((a, b) => a + b) / array.length;
   const mediaString = media.toString();
   if (mediaString.match(/.5$/)) {
-    return Math.floor(parseFloat(mediaString));
+  return Math.floor(parseFloat(mediaString));
   }
   return Math.round(media);
-};
-
-module.exports = average;
+  };
+  
+  module.exports = average; 

@@ -13,6 +13,7 @@ const circle = require('../src/circle');
     - Um número inteiro. Exemplos: 1; 3;
   Comportamento:
     - circle(1) // Retorno: {radius: 1, area: 3.14, circumference: 6.28}
+    - circle(2) // Retorno: {radius: 2, area: , circumference: 12.56}
     - circle(7) // Retorno: {radius: 7, area: 153.86, circumference: 43.96}
     - circle(3) // Retorno: {radius: 3, area: 28,26, circumference: 18.84}
 
@@ -25,13 +26,18 @@ const circle = require('../src/circle');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
+    assert.ok(typeof circle(1) === "object", "not an object");
     // Teste se o objeto retornado tem 3 entradas.
+    assert.ok(circle(1).length === 3, "not all variables are right");
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    assert.ok(circle() === undefined, "you have to put values");
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+    assert.ok(circle(2).circumference ===  12.56, "circunference of 2 isn´t right");
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+    assert.ok(circle(3).area === 28,26, "area of 3 isn´t right");
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    assert.ok(circle(3).area === 28,26 && circle(3).circumference ===  18.84, "3 values are wrong");
   });
 });

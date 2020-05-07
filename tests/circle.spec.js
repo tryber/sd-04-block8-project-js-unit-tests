@@ -34,10 +34,10 @@ describe('#circle', () => {
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.ok(circle() === undefined, "you have to put values");
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.ok(circle(2).circumference ===  12.56, "circunference of 2 isn´t right");
+    assert.ok(circle(2).circumference ===  "12.56", "circunference of 2 isn´t right");
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.ok(circle(3).area.toPrecision(4) == 28.26, "area of 3 isn´t right");
+    assert.ok(circle(3).area.toPrecision(4) == "28.26", "area of 3 isn´t right");
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.ok(circle(3).area.toPrecision(4) == 28.26 && circle(3).circumference.toPrecision(2) == 18.84 && circle(3).radius == 3, "3 values are wrong");
+    assert.ok(circle(3).area.toPrecision(4) === "28.26" && circle(3).circumference.toPrecision(4) === "18.84" && circle(3).radius === 3, "3 values are wrong");
   });
 });

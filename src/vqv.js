@@ -15,7 +15,23 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
+const vqv = (nome, idade) => {
+  let output;
+  // console.log('nome',nome, 'idade', idade);
 
-const vqv = (nome, idade) => {};
+  if (typeof nome !== 'undefined') {
+    output = `'Oi, meu nome é ${nome}!
+tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!'`;
+  }
+  return output;
+};
+
 
 module.exports = vqv;
+
+// console.log('test empty',vqv());
+// // console.log('test empty',vqv('','30'));
+// console.log('test bob 30',vqv('Bob','30'));
+// console.log(vqv('Bob','30'));

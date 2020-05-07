@@ -28,7 +28,7 @@ const average = (arrNumbers) => {
   if (notANumber) {
     return undefined;
   }
-  return sum / quantity;
+  return Math.round(sum / quantity);
 };
 
 console.log(average([12, 9, 7, 11]));

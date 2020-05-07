@@ -46,6 +46,6 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(product[0] !== product[1], true)
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.deepEqual(product[0].details.productId.slice(product[0].details.productId.length-3), '123');
-    assert.deepEqual(product[1].details.productId.slice(product[0].details.productId.length-3), '123');
+    assert.deepEqual(product[1].details.productId.slice(product[1].details.productId.length-3), '123');
   });
 });

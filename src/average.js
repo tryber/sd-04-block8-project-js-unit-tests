@@ -13,7 +13,7 @@
 */
 
 const average = () => {
-  //add here
+  // add here
 };
 
 module.exports = average;

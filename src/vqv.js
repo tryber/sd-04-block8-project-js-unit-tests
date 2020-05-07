@@ -20,10 +20,10 @@ const vqv = (nome, idade) => {
   // console.log('nome',nome, 'idade', idade);
 
   if (typeof nome !== 'undefined') {
-    output = `'Oi, meu nome é ${nome}!
+    output = `Oi, meu nome é ${nome}!
 tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
-#VQV!'`;
+#VQV!`;
   }
   return output;
 };

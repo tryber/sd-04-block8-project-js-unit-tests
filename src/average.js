@@ -13,5 +13,6 @@
 */
 
 const average = () => {};
+// just to commit and creat a pull request
 
 module.exports = average;

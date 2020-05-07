@@ -13,11 +13,10 @@
 */
 
 const average = (array) => {
-  console.log(true);
   let list1 = 0;
   if (typeof array !== 'object') {
     return undefined;
-  } else if (array === 0) {
+  } else if (array.length === 0) {
     return undefined;
   }
   for (i = 0; i < array.length; i += 1) {
@@ -32,4 +31,4 @@ const average = (array) => {
 
 module.exports = average;
 
-average([3, 4, 5]);
+average([]);

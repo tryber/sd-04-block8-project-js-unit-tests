@@ -12,8 +12,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // add here
+const average = (input) => {
+  let output;
+  let sum = 0;
+  let flag = 'ok';
+  if (input.length === 0) flag = 'undefined';
+  for (let i = 0; i < input.length; i += 1) {
+    if (typeof (input[i]) !== 'number') flag = 'undefined';
+    sum += input[i];
+  }
+  if (flag !== 'undefined') output = Math.round(sum / input.length);
+  return output;
 };
+
+// console.log('average 2 2 ',average([2, 2]));
+// console.log('average 1 2 ',average([1, 2]));
+// console.log('average 9.2 1 ',average([9.2, 1]));
+// console.log('average 1.3 1 ',average([1.1, 1]));
+// console.log('average test ',average('test'));
+// console.log('type of test ',typeof (average('test')));
 
 module.exports = average;

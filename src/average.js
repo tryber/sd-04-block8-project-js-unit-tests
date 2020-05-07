@@ -15,10 +15,8 @@
 const average = (arr) => {
   let somatoria = 0;
   for (let i = 0; i < arr.length; i += 1) {
-    if ( typeof arr[i] !== 'number' || arr.length === 0 ) return undefined;
-    else {
-      somatoria += arr[i];
-    }
+    if (typeof arr[i] !== 'number' || arr.length === 0) return undefined;
+    somatoria += arr[i];
   }
   return somatoria;
 };

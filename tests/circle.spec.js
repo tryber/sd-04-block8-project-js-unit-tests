@@ -30,7 +30,7 @@ describe('#circle', () => {
     // Teste se circle retorna um objeto.
     assert.ok(typeof circle(1) === "object", "not an object");
     // Teste se o objeto retornado tem 3 entradas.
-    assert.ok(circle(1).length === 3, "not all variables are right");
+    assert.ok(Object.keys(circle(1)).length === 3, "not all variables are right");
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.ok(circle() === undefined, "you have to put values");
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.

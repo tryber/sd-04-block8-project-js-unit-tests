@@ -13,6 +13,9 @@
 */
 
 const average = (array) => {
+  if (array === []) {
+    return undefined;
+  }
   for (i = 0; i < array.length; i += 1) {
     if (typeof (array[i]) === 'string') {
       return undefined;

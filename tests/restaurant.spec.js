@@ -41,15 +41,18 @@ describe("#createMenu", () => {
     objetoRetornado.order("agua");
     objetoRetornado.order("coxinha");
     assert.deepEqual(objetoRetornado.consumption, [
-      "coxinha", 
+      "coxinha",
       "coxinha",
       "agua",
-      "sopa", 
-      "sashimi", 
-      "coxinha", 
-      "agua", 
-      "coxinha", 
+      "sopa",
+      "sashimi",
+      "coxinha",
+      "agua",
+      "coxinha",
     ]);
-    assert.equal(objetoRetornado.pay(), ((3.9*6+9.9+39.9)*1.1).toPrecision(2));
+    assert.equal(
+      objetoRetornado.pay(),
+      ((3.9 * 6 + 9.9 + 39.9) * 1.1).toPrecision(2)
+    );
   });
 });

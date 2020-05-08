@@ -29,3 +29,4 @@ describe('#numbers', () => {
     assert.deepStrictEqual(numbers([' ']), false);
       });
 });
+

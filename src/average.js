@@ -18,8 +18,7 @@ const average = (array) => {
   console.log(array.length);
   for (let i = 0; i < array.length; i = 1 + i) {
     if (typeof array[i] === 'number') {
-      inicial = array[i] + inicial;
-    }
+      inicial = array[i] + inicial; }
     else { return undefined; }
   }
   return (parseInt(inicial / array.length, 10));

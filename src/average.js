@@ -16,12 +16,12 @@
 const average = (array) => {
   let inicial = 0;
   console.log(array.length);
-  for (let i = 0; i < array.length ; i++){
+  for ( let i = 0; i < array.length; i = 1 + i ){
     inicial = array[i] + inicial;
   }
-  return (parseInt(inicial / array.length) );
+  return (parseInt(inicial/array.length));
 };
 
-console.log(average([2, 3, 4, 10 , 27 ,40]));
+console.log(average([2, 3, 4,10 ,27 ,40 ]));
 
 module.exports = average;

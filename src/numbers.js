@@ -10,12 +10,14 @@
 */
 
 const numbers = (myArray) => {
+  let zerado=0;
   for (let i = 0; i < myArray.length; i += 1) {
     if (typeof myArray[i] !== 'number') {
-      return false;
-    }
-  }
-  return true;
+      zerado += 1;
+    } 
+  } if (zerado > 0) {
+    return false;
+  } return true;
 };
-
+console.log(numbers([2,4,'adjlfksj']));
 module.exports = numbers;

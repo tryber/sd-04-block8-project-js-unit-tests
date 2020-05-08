@@ -70,7 +70,7 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
-    assert.deepStrictEqual(Object.keys(restaurant.fetchMenu), ['food', 'drink']);
+    assert.deepStrictEqual(Object.keys(restaurant.fetchMenu()), ['food', 'drink']);
     // ```
     // Agora faça o TESTE 3 deste arquivo.
     // --------------------------------------------------------------------------------------
@@ -79,7 +79,7 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: objetoQualquer
 
-    assert.deepStrictEqual(restaurant.fetchMenu, objeto);
+    assert.deepStrictEqual(restaurant.fetchMenu(), objeto);
 
     // ```
     // Agora faça o TESTE 4 deste arquivo.

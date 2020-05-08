@@ -89,13 +89,13 @@ function getItemPrice(item, menu) {
 function payFromMenu() {
   let result = 0;
   for (let i = 0; i < this.consumption.length; i += 1) {
-    result += getItemPrice(this.consumption[i], this.fetchMenu);
+    result += getItemPrice(this.consumption[i], this.fetchMenu());
   }
   return result + (result * 0.1);
 }
 
 const createMenu = menu => ({
-  fetchMenu: menu,
+  fetchMenu: () => menu,
   consumption: [],
   order: orderFromMenu,
   pay: payFromMenu,

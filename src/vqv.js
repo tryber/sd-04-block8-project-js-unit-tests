@@ -17,6 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
+  if(!nome || !idade) return undefined;
   console.log(`Oi, meu nome é ${nome}!
 tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!

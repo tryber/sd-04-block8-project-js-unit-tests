@@ -13,18 +13,18 @@
 */
 
 const average = (arr) => {
-  // console.log(`Calcule a média do vetor ${arr}`);
   let counter = 0;
-  for (let i=0; i<arr.length; i++){
-    // console.log(`O elemento da posição '${i}' é do tipo: ${typeof(arr[i])}`)
-      if (typeof(arr[i]) === "number"){
-        counter += arr[i];
-      } else return 'undefined';
-    }
-  // console.log(`A soma dos elementos do vetor é igual a ${counter}`);
-  let average = counter / arr.length;
-  return Math.round(average);
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof (arr[i]) === 'number') {
+      counter += arr[i];
+    } else return 'undefined';
+  }
+  const media = counter / arr.length;
+  return Math.round(media);
 };
+// console.log(`Calcule a média do vetor ${arr}`);
+// console.log(`O elemento da posição '${i}' é do tipo: ${typeof(arr[i])}`)
+// console.log(`A soma dos elementos do vetor é igual a ${counter}`);
 // console.log(`A média dos elementos do vetor é ${average([2, 2])}`);
 // console.log(`A média dos elementos do vetor é ${average([1, 2])}`);
 // console.log(`A média dos elementos do vetor é ${average([1, '2'])}`);

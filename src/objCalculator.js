@@ -28,8 +28,8 @@ const calculator = (a, b) => {
     add,
     mult,
     div,
-    sub
-  }
+    sub,
+  };
 };
 
 module.exports = calculator;

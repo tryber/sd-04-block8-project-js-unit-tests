@@ -33,7 +33,7 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    // assert.fail();
+    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     assert.strictEqual(typeof productDetails, 'function');
     // Teste que o retorno da função é um array.

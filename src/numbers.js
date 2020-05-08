@@ -10,7 +10,7 @@
 */
 
 const numbers = (myArray) => {
-  if (myArray.length == 0) return false;
+  if (myArray.length === 0) return false;
   let zerado = 0;
   for (let i = 0; i < myArray.length; i += 1) {
     if (typeof myArray[i] !== 'number') {

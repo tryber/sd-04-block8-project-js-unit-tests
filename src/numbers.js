@@ -10,7 +10,7 @@
 */
 
 const numbers = (myArray) => {
-  if (myArray.length === 0) return false;
+  if( myArray.length === 0) return false;
   let zerado = 0;
   for (let i = 0; i < myArray.length; i += 1) {
     if (typeof myArray[i] !== 'number') {
@@ -20,5 +20,8 @@ const numbers = (myArray) => {
     return false;
   } return true;
 };
-
+console.log(numbers([1, 2, 3, 4, 5]));
+console.log(numbers([1, 2, '3', 4, 5]));
+console.log(numbers([1, 'a', 3]));
+console.log(numbers([' ']));
 module.exports = numbers;

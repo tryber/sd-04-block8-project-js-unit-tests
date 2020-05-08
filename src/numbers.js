@@ -10,6 +10,7 @@
 */
 
 const numbers = (myArray) => {
+  myArray = [1, 2, 3, 4, 5];
   if (myArray.length === 0) return false;
   let zerado = 0;
   for (let i = 0; i < myArray.length; i += 1) {
@@ -22,6 +23,7 @@ const numbers = (myArray) => {
 };
 console.log(numbers([1, 2, 3, 4, 5]));
 console.log(numbers([1, 2, '3', 4, 5]));
-console.log(numbers([1, 'a', 3]));
-console.log(numbers([' ']));
+console.log(numbers([1, 'leigo', 3]));
+console.log(numbers([]));
+console.log(numbers([2, 3, 3, 3,3 ,3]));
 module.exports = numbers;

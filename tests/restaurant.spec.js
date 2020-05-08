@@ -51,10 +51,15 @@ const createMenu = require('../src/restaurant');
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
+    //assert.fail();
+    const objeto = {
+      food: { 'coxinha': 3.90, 'sanduiche': 9.90 },
+      drink: { 'agua': 3.90, 'cerveja': 6.90 },
+    };
+    let restaurant = createMenu(objeto);
     // TESTE 1: Verifique que, dado um objeto qualquer passado como um parâmetro para a função createMenu(), checa se o retorno da função é um objeto no seguinte formato: { fetchMenu: objetoQualquer }.
     // ```
-    // createMenu(objetoQualquer) // Retorno: { fetchMenu: objetoQualquer }
+    assert.deepStrictEqual(typeof createMenu(restaurant).fetchMenu(), 'object'); // Retorno: { fetchMenu: objetoQualquer }
     // ```
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
@@ -62,6 +67,7 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
+    assert.deepStrictEqual(Object.keys(restaurant.fetchMenu()), ['food', 'drink']);
     // ```
     // Agora faça o TESTE 3 deste arquivo.
     // --------------------------------------------------------------------------------------
@@ -70,12 +76,14 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: objetoQualquer
     // ```
+    assert.deepStrictEqual((restaurant.fetchMenu()), objeto);
     // Agora faça o TESTE 4 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.consumption // Retorno: []
+    assert.deepStrictEqual(restaurant.consumption, []);
     // ```
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------

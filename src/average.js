@@ -13,13 +13,13 @@
 */
 
 const average = (arr) => {
-  let array = arr;
+  const array = arr;
   let element = 0;
-  
   for (let index = 0; index < array.length; index += 1) {
+    if(typeof array[index] !== Number) return undefined;
     element += array[index];
   }
-  return (element/array.length).toFixed(0);
+  return Math.round((element / array.length));
 };
 
 

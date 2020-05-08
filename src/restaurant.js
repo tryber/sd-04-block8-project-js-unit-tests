@@ -79,6 +79,6 @@ const createMenu = menu => ({
   fetchMenu: () => menu,
   consumption: [],
   order: orderFromMenu,
-})
+});
 
 module.exports = createMenu;

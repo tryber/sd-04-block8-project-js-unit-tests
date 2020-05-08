@@ -17,11 +17,13 @@ const average = (array) => {
   let inicial = 0;
   console.log(array.length);
   for (let i = 0; i < array.length; i = 1 + i) {
+    if(typeof array[i] === 'number' )
     inicial = array[i] + inicial;
+    else return undefined;
   }
   return (parseInt(inicial / array.length, 10));
 };
 
-console.log(average([2, 3, 4, 10, 27, 40]));
+console.log(average([2,'2']));
 
 module.exports = average;

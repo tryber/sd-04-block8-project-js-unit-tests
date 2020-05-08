@@ -74,6 +74,7 @@
 function createMenu(obj) {
   return {
     fetchMenu: () => obj,
+    consumption: [],
   };
 }
 

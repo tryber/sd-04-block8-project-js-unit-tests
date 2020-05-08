@@ -87,7 +87,7 @@ const createMenu = (imput) => {
       for (i = 0; i < list.length; i += 1) {
         soma += tabela[list[i]];
       }
-      return soma * 1.1;
+      return (soma * 1.1).toFixed(2);
     },
   };
   return obj;

@@ -3,11 +3,11 @@ const average = (arr) => {
   if (!arr.length) {
     return undefined;
   }
-  for (const element of arr) {
-    if (typeof element !== "number") {
-      return undefined;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof arr[i] === 'number') {
+      sum += arr[i];
     } else {
-      sum += element;
+      return undefined;
     }
   }
   return Math.round(sum / arr.length);

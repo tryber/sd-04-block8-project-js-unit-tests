@@ -92,9 +92,6 @@ function calcTot() {
   const menu = this.consumption;
   let total = 0;
   total += resCal(menu, comidas, bebidas);
-  // console.log(menu);
-  // console.log(comidas);
-  // console.log(total);
   return parseFloat(total * 1.1).toPrecision(4);
 }
 
@@ -106,19 +103,4 @@ const createMenu = obj =>
   pay: calcTot,
 });
 
-// let a = { 
-//   food: {
-//     'coxinha': 3.9,
-//     'sopa': 9.9,
-//   },
-//   drink: {
-//     'agua': 3.9,
-//     'cerveja': 6.9,
-//   },
-// };
-// const obj = createMenu(a);
-// console.log(obj.order('coxinha'));
-// console.log(obj.order('agua'));
-// console.log(obj.order('coxinha'));
-// console.log(obj.pay());
 module.exports = createMenu;

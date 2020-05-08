@@ -16,10 +16,10 @@
 */
 
 const createStudent = (str) => {
-  let obj = {
-      name: str,
-      feedback: () => 'Eita pessoa boa!',
-  }
+  const obj = {
+    name: str,
+    feedback: () => 'Eita pessoa boa!',
+  };
   return obj;
 };
 

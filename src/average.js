@@ -20,7 +20,7 @@ const average = (arr) => {
     } else return 'undefined';
   }
   const media = counter / arr.length;
-  return Math.round(media);
+  return Math.trunc(media);
 };
 // console.log(`Calcule a média do vetor ${arr}`);
 // console.log(`O elemento da posição '${i}' é do tipo: ${typeof(arr[i])}`)

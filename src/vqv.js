@@ -24,6 +24,4 @@ trabalho na Trybe e mando muito em programação!
 #VQV!`;
 };
 
-console.log(vqv('Orlando', 33))
-
 module.exports = vqv;

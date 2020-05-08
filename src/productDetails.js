@@ -33,22 +33,22 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    //assert.fail();
+    //assert.fail()
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.equal(Array.isArray(productDetails()), true)
+    assert.equal(Array.isArray(productDetails()), true);
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.equal(productDetails('Alcool gel', 'Máscara').length, 2)
+    assert.equal(productDetails('Alcool gel', 'Máscara').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.equal(typeof(productDetails('Alcool gel', 'Máscara')), 'object')
+    assert.equal(typeof (productDetails('Alcool gel', 'Máscara')), 'object');
     // Teste que os dois objetos são diferentes entre si.
     const iguais = productDetails('Alcool gel', 'Máscara')[0].name === productDetails('Alcool gel', 'Máscara')[1].name;
-    assert.equal(iguais, false)
+    assert.equal(iguais, false);
     // (Difícil) Teste que os dois productIds terminam com 123.
     const product0 = productDetails('Alcool gel', 'Máscara')[0].details.productId;
     const product1 = productDetails('Alcool gel', 'Máscara')[1].details.productId;
-    const p1 = product0.substring(product0.length -3 );
-    const p2 = product1.substring(product1.length -3 );
+    const p1 = product0.substring ( product0.length -3 );
+    const p2 = product1.substring ( product1.length -3 );
     assert.equal(p1 === p2, true);
   });
 });

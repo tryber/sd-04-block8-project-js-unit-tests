@@ -14,21 +14,21 @@
 
 const average = (array) => {
   let lista = 0;
-    if(typeof array !== 'object') {
-      return undefined
-    } else if(array.length == 0){
-      return undefined
+  if (typeof array !== 'object') {
+    return undefined;
+  } else if (array.length === 0) {
+    return undefined;
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number') {
+      return undefined;
     }
-    for (let i = 0; i < array.length; i+=1) {
-      if (typeof array[i] !== 'number') {
-        return undefined
-      }
-      lista += array[i]
+    lista += array[i];
   }
 
-  const resul = Math.round(lista / array.length)
-  console.log(resul)
-  return resul
+  const resul = Math.round(lista / array.length);
+  console.log(resul);
+  return resul;
 };
 
 module.exports = average;

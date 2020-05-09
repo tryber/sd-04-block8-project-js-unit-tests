@@ -82,7 +82,9 @@ const createMenu = (obj) => {
       return orderArray;
     }),
     pay: (pay = () => {
-      orderArray.forEach((element) => paycheck += objeto.fetchMenu[element]);
+      orderArray.forEach((element) => {
+        paycheck += objeto.fetchMenu[element]
+      });
       return paycheck * 1.1;
     }),
   };

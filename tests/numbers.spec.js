@@ -21,11 +21,18 @@ describe('#numbers', () => {
    // assert.fail();
     
 const result = [1, 2, 3, 4, 5];
+const errado = [1, 2, '3', 4, 5]
 
    assert.deepStrictEqual(numbers(result), true,  'Valor de saída errado!');
     // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
+
+   assert.deepStrictEqual(numbers(errado), false, 'Digite todos valores numéricos!' ) 
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
+
+    assert.deepStrictEqual(numbers([1, 'a', 3]), false, 'Digite somente valores numéricos')
     // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
+
+    assert.deepStrictEqual(numbers([' ']), false, 'Valor inválido!')
     // Escreva um teste em que a função recebe [' '] e retorna false
   });
 });

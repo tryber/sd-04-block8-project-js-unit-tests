@@ -15,13 +15,24 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
+function notNull (x){
+  if(x!="" && !(x.match(/^\s+$/))){
+      return true;
+  }else{
+      return false;
+}
+};
 
 const vqv = (nome, idade) => {
-  if(!nome || !idade) return undefined;
-  console.log(`Oi, meu nome é ${nome}!
+
+if(nome == '' || idade.length === 0) {
+  return undefined;
+}
+ console.log(`Oi, meu nome é ${nome}!
 tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`);
 };
+console.log(vqv('victor',4));
 
 module.exports = vqv;

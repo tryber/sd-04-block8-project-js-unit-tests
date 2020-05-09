@@ -23,13 +23,5 @@ const average = (arr) => {
   const media = counter / arr.length;
   return Math.trunc(media);
 };
-// console.log(`Calcule a média do vetor ${arr}`);
-// console.log(`O elemento da posição '${i}' é do tipo: ${typeof(arr[i])}`)
-// console.log(`A soma dos elementos do vetor é igual a ${counter}`);
-// console.log(`A média dos elementos do vetor é ${average([2, 2])}`);
-// console.log(`A média dos elementos do vetor é ${average([1, 2])}`);
-// console.log(`A média dos elementos do vetor é ${average([1, '2'])}`);
-average([2, 2]);
-average([1, 2]);
-average([1, '2']);
+
 module.exports = average;

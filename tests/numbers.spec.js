@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
-const assert = require('assert');
-const numbers = require('../src/numbers');
+const assert = require("assert");
+const numbers = require("../src/numbers");
 
 /*
   A função numbers recebe um array (tamanho variável) e retorna true se todos os parâmetros forem do tipo 'number' e false caso contrário.
@@ -16,23 +16,31 @@ const numbers = require('../src/numbers');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-describe('#numbers', () => {
-  it('should return an array and return if it has only numbers or not', () => {
-   // assert.fail();
-    
-const result = [1, 2, 3, 4, 5];
-const errado = [1, 2, '3', 4, 5]
+describe("#numbers", () => {
+  it("should return an array and return if it has only numbers or not", () => {
+    // assert.fail();
 
-   assert.deepStrictEqual(numbers(result), true,  'Valor de saída errado!');
+    const result = [1, 2, 3, 4, 5];
+    const errado = [1, 2, "3", 4, 5];
+
+    assert.deepStrictEqual(numbers(result), true, "Valor de saída errado!");
     // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
 
-   assert.deepStrictEqual(numbers(errado), false, 'Digite todos valores numéricos!' ) 
+    assert.deepStrictEqual(
+      numbers(errado),
+      false,
+      "Digite todos valores numéricos!"
+    );
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
 
-    assert.deepStrictEqual(numbers([1, 'a', 3]), false, 'Digite somente valores numéricos')
+    assert.deepStrictEqual(
+      numbers([1, "a", 3]),
+      false,
+      "Digite somente valores numéricos"
+    );
     // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
 
-    assert.deepStrictEqual(numbers([' ']), false, 'Valor inválido!')
+    assert.deepStrictEqual(numbers([" "]), false, "Valor inválido!");
     // Escreva um teste em que a função recebe [' '] e retorna false
   });
 });

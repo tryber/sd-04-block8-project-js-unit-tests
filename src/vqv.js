@@ -24,15 +24,18 @@ function notNull (x){
 };
 
 const vqv = (nome, idade) => {
-
-if(nome == '' || idade.length === 0) {
+let txt ;
+if(nome == '' || idade == undefined) {
   return undefined;
 }
- console.log(`Oi, meu nome é ${nome}!
+ txt = `Oi, meu nome é ${nome}!
 tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
-#VQV!`);
+#VQV!`;
+return txt;
 };
-console.log(vqv('victor',4));
+//console.log("certo" + vqv('victor',4));
+//console.log("errado" + vqv('',4));
+//console.log("errado" + vqv('victor',));
 
 module.exports = vqv;

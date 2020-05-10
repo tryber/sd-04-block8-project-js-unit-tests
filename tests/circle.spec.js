@@ -32,9 +32,9 @@ describe('#circle', () => {
     assert.equal(circle(2).circumference, 4*3.14);
     assert.equal(circle(3).area.toFixed(2), 9*3.14);
     assert.deepStrictEqual(circle(3), {
-      radius = 3,
-      area = 28.2,
-      circumference = 18.8
+      radius: 3,
+      area: 28,
+      circumference: 18,
     });
   });
 });

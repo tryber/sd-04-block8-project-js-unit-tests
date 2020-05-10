@@ -13,11 +13,11 @@
 */
 
 const average = (array) => {
-  if (array = []) return undefined;
-  for (let i = 0; i < array.length; i ++) {
+  if (array.length === 0) return undefined;
+  for (let i = 0; i < array.length; i += 1) {
     if (typeof array[i] !== 'number') return undefined;
   }
-  return Math.round (array.reduce((a, b) => a + b) / array.length);
+  return Math.round(array.reduce((a, b) => a + b) / array.length);
 };
 
 module.exports = average;

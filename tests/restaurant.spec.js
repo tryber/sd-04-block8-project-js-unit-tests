@@ -132,7 +132,7 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     let soma = 3.9 + 3.9 + 3.9;
-    assert.strictEqual(objetoRetornado.pay(), soma);
+    assert.strictEqual(objetoRetornado.pay(), soma * 1.10);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });

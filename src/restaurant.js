@@ -78,8 +78,11 @@ const createMenu = (obj) => {
     order: pedido => objeto.consumption.push(pedido),
     pay: () => {
       let soma = 0;
-      // tem q ser feita ainda
-      return soma;
+      objeto.consumption.forEach((element) => {
+        if (objeto.fetchMenu.food[element]) soma += objeto.fetchMenu.food[element];
+        if (objeto.fetchMenu.drink[element]) soma += objeto.fetchMenu.drink[element];
+      });
+      return soma * 1.10;
     },
   };
   return objeto;

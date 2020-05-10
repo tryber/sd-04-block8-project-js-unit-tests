@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const soma = (total, adicional) => { total += adicional; };
+const soma = (total, adicional) => { return total += adicional; };
 
 const average = (entrada) => {
   let media = 0;
@@ -21,7 +21,7 @@ const average = (entrada) => {
   if (entrada.length === 0) return undefined;
 
   for (let i = 0; i < entrada.length; i += 1) {
-    if (entrada[i] !== number || entrada[i] === undefined) return undefined;
+    if (typeof entrada[i] !== 'number' || entrada[i] === undefined) return undefined;
     somatorio = soma(somatorio, entrada[i]);
   }
 

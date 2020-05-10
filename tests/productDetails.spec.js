@@ -36,7 +36,7 @@ describe('#productDetails', () => {
     //assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(Array.isArray(productDetails('first', 'second')), true) // OK!!!!
+    assert.deepStrictEqual(typeof productDetails('Alcool gel', 'Máscara'), 'object') // OK!!!!
 
     // Teste que o array retornado pela função contém dois itens dentro. 
     assert.strictEqual(productDetails('first', 'second').length, 2) // OK!!!!
@@ -48,7 +48,7 @@ describe('#productDetails', () => {
     assert.strictEqual(productDetails('first', 'second')[0] !== productDetails('first', 'second')[0], true)  //  OK!!!!
 
     // (Difícil) Teste que os dois productIds terminam com 123.
-    //assert.strictEqual()
+    assert.strictEqual(productDetails('a','b')[0].details.productId.substr(-3) && productDetails('a','b')[1].details.productId.substr(-3), '123'); // OK!!!
   });
 });
 

@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const soma = (total, adicional) => { return total += adicional; };
+const soma = (total, adicional) => (total += adicional);
 
 const average = (entrada) => {
   let media = 0;

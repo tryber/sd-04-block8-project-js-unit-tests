@@ -30,13 +30,13 @@
 */
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
-//
+// DONE!
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
-//
+// DONE!
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -52,12 +52,67 @@
 // const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`. Essa função deve ser associada à chave `order` de `restaurant`
 // ```
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
-
+// Done
 //------------------------------------------------------------------------------------------
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = objetoPassadoPorParametro => ({ fetchMenu: objetoPassadoPorParametro });
+function orderFromMenu(request) {
+  this.consumption.push(request);
+}
 
-console.log(typeof createMenu('test'));
-console.log(createMenu('test'));
+function payMenu() {
+  const foodDrink = Object.assign(
+    {},
+    this.fetchMenu.food,
+    this.fetchMenu.drinks,
+  );
+  const consumptionList = this.consumption;
+  let bill = 0;
+  for (let index = 0; index < consumptionList.length; index += 1) {
+    bill += foodDrink[consumptionList[index]];
+  }
+  bill = parseFloat(parseFloat(bill * 1.1).toPrecision(4));
+  return bill;
+}
+
+const createMenu = objetoPassadoPorParametro => ({
+  fetchMenu: objetoPassadoPorParametro,
+  consumption: [],
+  order: orderFromMenu,
+  pay: payMenu,
+});
+
+// const retaurant = createMenu('objetoQualquer');
+// console.log(retaurant);
+// const orderCoxinha = retaurant.order("coxinha");
+// // console.log(orderCoxinha);
+// console.log(retaurant.consumption)
+
+// const objetoRetornado2 = createMenu({ food: {'coxinha': 3.90, 'sanduiche': 9.90}, drinks: {'agua': 3.90, 'cerveja': 6.90} });
+// // console.log(objetoRetornado2);
+// // objetoRetornado2.consumption = [];
+// objetoRetornado2.order('coxinha');
+// objetoRetornado2.order('agua');
+// objetoRetornado2.order('coxinha');
+// // console.log('Consomation', objetoRetornado2.consumption);
+// console.log(objetoRetornado2.pay());
+// console.log(typeof objetoRetornado2.pay());
+    // console.log('bill', createMenu.pay);
+    // const Food = objetoRetornado2.fetchMenu.food;
+    // console.log('Food coxinha value', Food.coxinha);
+    // console.log('Food_Drink', Food_Drink);
+
+  // const consumption = objetoRetornado2.consumption = [];
+
+// console.log('consumption', consumption);
+// console.log('Food_Drink', Food_Drink);
+// console.log('bill', bill);
+
+//   console.log(Object.values(objetoRetornado2.fetchMenu.food));
+// const valueFoodConsumed = Object.values(objetoRetornado2.fetchMenu.food);
+// console.log('valueFoodConsumed',valueFoodConsumed);
+// const valueDrinkConsumed = Object.values(objetoRetornado2.fetchMenu.drinks);
+          // console.log('valueFoodConsumedSum',valueFoodConsumedSum);
+          // console.log('valueDrinkConsumedSum',valueDrinkConsumedSum);
+module.exports = createMenu;

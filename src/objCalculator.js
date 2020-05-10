@@ -27,7 +27,4 @@ const calculator = {
   sub: (x, y) => x - y,
 
 };
-
-
-
 module.exports = calculator;

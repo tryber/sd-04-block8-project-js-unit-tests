@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
-const assert = require('assert');
-const circle = require('../src/circle');
+const assert = require("assert");
+const circle = require("../src/circle");
 
 /*
   Essa função recebe o raio de um círculo e retorna um objeto contendo suas informações (Raio, Área e Circunferência).
@@ -23,15 +23,37 @@ const circle = require('../src/circle');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-describe('#circle', () => {
-  it('given a radius, should return an object with circles info', () => {
-    assert.fail();
-    // ESCREVA SEUS TESTES ABAIXO:
+describe("#circle", () => {
+  it("given a radius, should return an object with circles info", () => {
+    // assert.fail();
+    const result = circle(1);
+    const result3 = circle(3);
+    const expected = { area: 3.14, circumference: 6.28, radius: 1 };
+    const tipo = typeof { area: 3.14, circumference: 6.28, radius: 1 };
+    const circumference =
+      // ESCREVA SEUS TESTES ABAIXO:
+      assert.deepEqual(result, expected, "passou no teste 1");
+    assert.strictEqual(typeof result, "object");
     // Teste se circle retorna um objeto.
+    assert.strictEqual(Object.keys(result).length, 3);
     // Teste se o objeto retornado tem 3 entradas.
+    assert.strictEqual(circle(), undefined);
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    assert.deepEqual(circle(2), {
+      area: 12.56,
+      circumference: 12.56,
+      radius: 2,
+    });
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+
+    assert.deepEqual(circle(3).area, 3.14 * 3 * 3);
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+
+    assert.deepEqual(circle(3), {
+      radius: 3,
+      circumference: 2 * 3.14 * 3,
+      area: 3.14 * 3 * 3,
+    });
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
   });
 });

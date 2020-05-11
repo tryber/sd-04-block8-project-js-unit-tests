@@ -79,25 +79,15 @@ const createMenu = (o) => {
   menuRet.pay = () => {
     let total = 0;
     for (let i = 0; i < menuRet.consumption.length; i += 1) {
-      switch (menuRet.consumption[i]) {
-        case 'coxinha':
-          total += o.food.coxinha;
-          break;
-        case 'sopa':
-          total += o.food.sopa;
-          break;
-        case 'agua':
-          total += o.drink.agua;
-          break;
-        case 'cerveja':
-          total += o.drink.cerveja;
-          break;
-        default:
-          total += 0;
-      }
+      Object.entries(o.food).forEach(([key, value]) => {
+        if (menuRet.consumption[i] === key) total += value;
+      });
+      Object.entries(o.drink).forEach(([key, value]) => {
+        if (menuRet.consumption[i] === key) total += value;
+      });
     }
     return total + (total * 0.10);
-  }
+  };
   return menuRet;
 };
 

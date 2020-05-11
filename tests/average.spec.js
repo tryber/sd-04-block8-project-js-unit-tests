@@ -1,4 +1,3 @@
-/*Teste para o primeiro commit*/
 /* eslint-disable max-len */
 
 const assert = require('assert');

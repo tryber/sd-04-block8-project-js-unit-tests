@@ -41,7 +41,7 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 
 ### 6 - Implemente os casos de teste no arquivo `tests/productDetails.spec.js`
 
-### 7 - Implemente a função do arquivo `src/objCalculator.js`
+ 7 - Implemente a função do arquivo `src/objCalculator.js`
 
 ### 8 - Implemente a função do arquivo `src/myCounter.js`
 

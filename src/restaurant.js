@@ -83,8 +83,8 @@ const createMenu = (o) => {
       if (menuRet.consumption[i] === key) total += value;
     };
     for (i; i < menuRet.consumption.length; i += 1) {
-      Object.entries(o.food).forEach(f);
-      Object.entries(o.drink).forEach(f);
+      Object.entries(menuRet.fetchMenu().food).forEach(f);
+      Object.entries(menuRet.fetchMenu().drink).forEach(f);
     }
     return total + (total * 0.10);
   };

@@ -78,13 +78,13 @@ const createMenu = (o) => {
   menuRet.order = s => menuRet.consumption.push(s);
   menuRet.pay = () => {
     let total = 0;
-    for (let i = 0; i < menuRet.consumption.length; i += 1) {
-      Object.entries(o.food).forEach(([key, value]) => {
-        if (menuRet.consumption[i] === key) total += value;
-      });
-      Object.entries(o.drink).forEach(([key, value]) => {
-        if (menuRet.consumption[i] === key) total += value;
-      });
+    let i = 0;
+    const f = ([key, value]) => {
+      if (menuRet.consumption[i] === key) total += value;
+    };
+    for (i; i < menuRet.consumption.length; i += 1) {
+      Object.entries(o.food).forEach(f);
+      Object.entries(o.drink).forEach(f);
     }
     return total + (total * 0.10);
   };

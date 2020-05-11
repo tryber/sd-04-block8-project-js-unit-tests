@@ -85,13 +85,13 @@ describe('#createMenu', () => {
     const entriesDrinkFetchMenu = Object.entries(createMenu(menuArg).fetchMenu().drink);
     assert.strictEqual(entriesFoodMenuArg.length === entriesFoodFetchMenu.length && entriesDrinkMenuArg.length === entriesDrinkFetchMenu.length, true);
     assert.strictEqual(entriesFoodMenuArg[0][0] === entriesFoodFetchMenu[0][0] &&
-    entriesFoodMenuArg[0][1] === entriesFoodFetchMenu[0][1] &&
-    entriesFoodMenuArg[1][0] === entriesFoodFetchMenu[1][0] &&
-    entriesFoodMenuArg[1][1] === entriesFoodFetchMenu[1][1], true);
+      entriesFoodMenuArg[0][1] === entriesFoodFetchMenu[0][1] &&
+      entriesFoodMenuArg[1][0] === entriesFoodFetchMenu[1][0] &&
+      entriesFoodMenuArg[1][1] === entriesFoodFetchMenu[1][1], true);
     assert.strictEqual(entriesDrinkMenuArg[0][0] === entriesDrinkFetchMenu[0][0] &&
-    entriesDrinkMenuArg[0][1] === entriesDrinkFetchMenu[0][1] &&
-    entriesDrinkMenuArg[1][0] === entriesDrinkFetchMenu[1][0] &&
-    entriesDrinkMenuArg[1][1] === entriesDrinkFetchMenu[1][1], true);
+      entriesDrinkMenuArg[0][1] === entriesDrinkFetchMenu[0][1] &&
+      entriesDrinkMenuArg[1][0] === entriesDrinkFetchMenu[1][0] &&
+      entriesDrinkMenuArg[1][1] === entriesDrinkFetchMenu[1][1], true);
     // Agora faça o TESTE 4 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.

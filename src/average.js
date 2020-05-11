@@ -13,25 +13,19 @@
 */
 
 const average = (arr) => {
-  let sum = 0;
-  arr.forEach((element) => {
-    if (typeof (element) !== 'string') {
-      sum += element;
-    } else if (arr.length === 0) {
-      return undefined;
-    } else {
+  let media = 0;
+  if (arr.length === 0) {
+    return undefined;
+  }
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof (arr[i]) === 'string') {
       return undefined;
     }
-    return sum;
-  });
-  const media = sum / arr.length;
-  const resto = media - parseInt(media, 10);
-  if (resto === 0) {
-    return media;
-  } else if (resto > 0.5) {
-    return Math.ceil(media);
+    media += arr[i];
   }
-  return Math.floor(media);
+  media /= arr.length;
+  return Math.round(media);
 };
+console.log(average([3, 4, 5]));
 
 module.exports = average;

@@ -29,7 +29,7 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 
 ## Requisitos do projeto
 
-### 1 - Implemente a função do arquivo `src/average.js`
+1 - Implemente a função do arquivo `src/average.js`
 
 ### 2 - Implemente os casos de teste no arquivo `tests/numbers.js`
 
@@ -47,8 +47,9 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 
 **Agora prepare-se! Esse último requisito vai te guiar através de um longo e rico processo de desenvolvimento orientado a testes (Test Driven Development, ou TDD). Dará trabalho, mas vale a pena!**
 
-### 9 - Implemente os casos de teste no arquivo `tests/restaurant.spec.js` e as funções do arquivo `src/restaurant.js`
+### 9 - Implemente os casos de teste no arquivo `tests/restaurant.spec.js` 
 
+### 9 - Implemente as funções do arquivo `src/restaurant.js`
 ---
 
 ## Instruções para entregar seu projeto

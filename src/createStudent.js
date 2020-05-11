@@ -15,8 +15,8 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 const createStudent = nome => ({
-    name: nome,
-    feedback: () => 'Eita pessoa boa!'
+  name: nome,
+  feedback: () => 'Eita pessoa boa!',
 });
 const estudante = createStudent('Vitao, Ritmo constante');
 console.log(typeof estudante);

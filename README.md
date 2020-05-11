@@ -33,7 +33,7 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 
 ### 2 - Implemente os casos de teste no arquivo `tests/numbers.js`
 
-### 3 - Implemente a função do arquivo `src/vqv.js`
+3 - Implemente a função do arquivo `src/vqv.js`
 
 ### 4 - Implemente os casos de teste no arquivo `tests/circle.spec.js`
 

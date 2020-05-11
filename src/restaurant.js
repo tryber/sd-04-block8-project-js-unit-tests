@@ -80,7 +80,7 @@ const createMenu = (objeto) => {
     order: requestOrder,
     pay: () => {
       let somaDosPreçosDosPedidos = 0;
-      const element = (acumulador, preçosPedidos) => acumulador + preçosPedidos;
+      const element = (acc, cur) => acc + cur;
       somaDosPreçosDosPedidos += Number(Object.values(menu.fetchMenu.food).reduce(element));
       somaDosPreçosDosPedidos += Number(Object.values(menu.fetchMenu.drinks).reduce(element));
       return (somaDosPreçosDosPedidos * 1.1).toFixed(2);

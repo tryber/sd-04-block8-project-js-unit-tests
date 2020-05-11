@@ -37,7 +37,7 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 
 ### 4 - Implemente os casos de teste no arquivo `tests/circle.spec.js`
 
-### 5 - Implemente a função do arquivo `src/createStudent.js`
+ 5 - Implemente a função do arquivo `src/createStudent.js`
 
 ### 6 - Implemente os casos de teste no arquivo `tests/productDetails.spec.js`
 

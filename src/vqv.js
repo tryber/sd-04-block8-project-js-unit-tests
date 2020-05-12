@@ -16,32 +16,32 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {
-  if (nome && idade != null) {
-    return `Oi, meu nome é ${nome}!
-  Tenho ${idade} anos,
-  trabalho na Trybe e mando muito em programação!
-  #VQV`;
-  }
-  return undefined;
-};
-
 // const vqv = (nome, idade) => {
 //   if (nome && idade != null) {
-//     return (
-//       "Oi, meu nome é " +
-//       nome +
-//       "!\n" +
-//       "Tenho " +
-//       idade +
-//       " anos,\n" +
-//       "trabalho na Trybe e mando muito em programação!\n" +
-//       "#VQV!"
-//     );
-//   } else {
-//     return undefined;
+//     return `Oi, meu nome é ${nome}!
+//   Tenho ${idade} anos,
+//   trabalho na Trybe e mando muito em programação!
+//   #VQV!`;
 //   }
+//   return undefined;
 // };
 
-console.log(vqv());
+const vqv = (nome, idade) => {
+  if (nome && idade != null) {
+    return (
+      "Oi, meu nome é " +
+      nome +
+      "!\n" +
+      "Tenho " +
+      idade +
+      " anos,\n" +
+      "trabalho na Trybe e mando muito em programação!\n" +
+      "#VQV!"
+    );
+  } else {
+    return undefined;
+  }
+};
+
+console.log(vqv('Tunico',29));
 module.exports = vqv;

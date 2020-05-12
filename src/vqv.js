@@ -29,19 +29,13 @@
 const vqv = (nome, idade) => {
   if (nome && idade != null) {
     return (
-      "Oi, meu nome é " +
-      nome +
-      "!\n" +
-      "Tenho " +
-      idade +
-      " anos,\n" +
-      "trabalho na Trybe e mando muito em programação!\n" +
-      "#VQV!"
+      `Oi, meu nome é  ${nome}!
+       Tenho ${idade} anos,
+       trabalho na Trybe e mando muito em programação!
+       #VQV!`
     );
-  } else {
-    return undefined;
   }
+  return undefined;
 };
 
-console.log(vqv('Tunico',29));
 module.exports = vqv;

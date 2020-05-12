@@ -15,8 +15,8 @@
 const average = (arr) => {
   let result = 0;
   if (arr.length === 0) return undefined; //  retorna undefined se for array vazia
-  for (let i = 0; i < arr.length; i+=) { //  loop para fazer somatória dos elementos da array
-    if (typeof arr[i] !== 'number') return undefined; //  verificar se tipo do elemento [i] é number para continuar ou retornar undefined 
+  for (let i = 0; i < arr.length; i += 1) { //  loop para fazer somatória dos elementos da array
+    if (typeof arr[i] !== 'number') return undefined; //  verificar se tipo do elemento [i] é number para continuar ou retornar undefined
     result += Math.round(arr[i]); // somatoria dos elementos já arredondados
   }
   result = Math.round(result / arr.length); //  faz a média e ja arredonda

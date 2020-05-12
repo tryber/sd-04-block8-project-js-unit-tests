@@ -1,4 +1,4 @@
-# Boas vindas ao repositório do projeto de ES6 e Testes Unitários!
+  # Boas vindas ao repositório do projeto de ES6 e Testes Unitários!
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
@@ -29,26 +29,27 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
 
 ## Requisitos do projeto
 
-### 1 - Implemente a função do arquivo `src/average.js`
+1 - Implemente a função do arquivo `src/average.js`
 
-### 2 - Implemente os casos de teste no arquivo `tests/numbers.js`
+2 - Implemente os casos de teste no arquivo `tests/numbers.js`
 
-### 3 - Implemente a função do arquivo `src/vqv.js`
+3 - Implemente a função do arquivo `src/vqv.js`
 
 ### 4 - Implemente os casos de teste no arquivo `tests/circle.spec.js`
 
-### 5 - Implemente a função do arquivo `src/createStudent.js`
+5 - Implemente a função do arquivo `src/createStudent.js`
 
-### 6 - Implemente os casos de teste no arquivo `tests/productDetails.spec.js`
+6 - Implemente os casos de teste no arquivo `tests/productDetails.spec.js`
 
-### 7 - Implemente a função do arquivo `src/objCalculator.js`
+7 - Implemente a função do arquivo `src/objCalculator.js`
 
-### 8 - Implemente a função do arquivo `src/myCounter.js`
+8 - Implemente a função do arquivo `src/myCounter.js`
 
 **Agora prepare-se! Esse último requisito vai te guiar através de um longo e rico processo de desenvolvimento orientado a testes (Test Driven Development, ou TDD). Dará trabalho, mas vale a pena!**
 
-### 9 - Implemente os casos de teste no arquivo `tests/restaurant.spec.js` e as funções do arquivo `src/restaurant.js`
+### 9 - Implemente os casos de teste no arquivo `tests/restaurant.spec.js` 
 
+### 9 - Implemente as funções do arquivo `src/restaurant.js`
 ---
 
 ## Instruções para entregar seu projeto

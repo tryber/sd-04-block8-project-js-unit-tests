@@ -46,5 +46,5 @@ describe('#vqv', () => {
         '#VQV!',
     );
     assert.strictEqual(vqv(), undefined);
-  });
-});
+   });
+ });

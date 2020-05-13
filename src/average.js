@@ -13,7 +13,7 @@
 */
 
 const average = (array) => {
-  const sum = array.reduce((acc, elem) => { return acc = acc + elem }, 0);
+  const sum = array.reduce((acc, elem) => (acc += elem), 0);
   const med = Math.round(sum / array.length);
   if (array.length === 0) {
     return undefined;

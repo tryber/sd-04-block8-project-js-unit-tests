@@ -13,15 +13,13 @@
 */
 
 const average = (arr) => {
-  if (arr.length !== 0) {
-    const test = arr.filter((c) => typeof c !== 'number');
-    if (test.length === 0) {
-      const sum = arr.reduce((acc, cum) => acc + cum);
-      if (sum === 0) {
-        return 0;
-      }
-      return Math.round(sum / arr.length);
+  const test = arr.filter(c => typeof c !== 'number');
+  if (arr.length !== 0 && test.length === 0) {
+    const sum = arr.reduce((acc, cum) => acc + cum);
+    if (sum === 0) {
+      return 0;
     }
+    return Math.round(sum / arr.length);
   }
   return undefined;
 };

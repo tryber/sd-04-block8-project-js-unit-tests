@@ -40,10 +40,20 @@ describe('#productDetails', () => {
     // Teste que o array retornado pela função contém dois itens dentro.
     assert.ok(Object.keys(productDetails('Alcool gel', 'Máscara')).length === 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.ok(typeof productDetails('Alcool gel', 'Máscara')[0] === 'object' && typeof productDetails('Alcool gel', 'Máscara')[1] === 'object');
+    assert.ok(
+      typeof productDetails('Alcool gel', 'Máscara')[0] === 'object'
+        && typeof productDetails('Alcool gel', 'Máscara')[1] === 'object',
+    );
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
+    assert.notDeepEqual(
+      productDetails('Alcool gel', 'Máscara')[0],
+      productDetails('Alcool gel', 'Máscara')[1],
+    );
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.substr(-3, 3) && productDetails('Alcool gel', 'Máscara')[1].details.productId.substr(-3, 3), '123');
+    assert.strictEqual(
+      productDetails('Alcool gel', 'Máscara')[0].details.productId.substr(-3, 3)
+        && productDetails('Alcool gel', 'Máscara')[1].details.productId.substr(-3, 3),
+      '123',
+    );
   });
 });

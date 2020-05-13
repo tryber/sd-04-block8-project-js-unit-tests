@@ -1,7 +1,9 @@
 /* eslint-disable max-len */
 
 /*
-  Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema, cadastrar um menu. Dado que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
+  Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível,
+  através desse sistema, cadastrar um menu. Dado que um menu foi cadastrado, o sistema deve disponibilizar
+  um objeto através do qual se consegue:
   - ler o menu cadastrado;
   - fazer pedidos;
   - verificar o que foi pedido;
@@ -55,22 +57,60 @@
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
-// DICA: para criar isso, você vai precisar definir a função `createMenu()`, definir o objeto que a `createMenu()` define separadamente dela e, depois, a função que será definida em `order`.
+// PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona
+//  essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
+// DICA: para criar isso, você vai precisar definir a função `createMenu()`, definir o objeto que a `createMenu()`
+//  define separadamente dela e, depois, a função que será definida em `order`.
 // ```
 // const restaurant = {}
 
 //
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
 //
-// const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`. Essa função deve ser associada à chave `order` de `restaurant`
+// const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida
+//  no parâmetro `request`. Essa função deve ser associada à chave `order` de `restaurant`
 // ```
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
+// PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de
+//  `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%.
+//  DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const restaurant = {};
+
+const orderFromMenu = (pedido) => { restaurant.consumption.push(pedido); };
+
+const buscaItens = (pedido, itens, conta) => {
+  for (let y = 0; y < Object.keys(itens).length; y += 1) {
+    if ((Object.keys(itens)[y]) === pedido) {
+      conta += Object.values(itens)[y];
+      break;
+    }
+  }
+  return conta;
+};
+
+const pagamento = () => {
+  let conta = 0;
+  let comparacao;
+  for (let i = 0; i < restaurant.consumption.length; i += 1) {
+    const pedido = restaurant.consumption[i];
+    comparacao = conta;
+    conta = buscaItens(pedido, restaurant.fetchMenu.food, conta);
+    if (conta === comparacao) conta = buscaItens(pedido, restaurant.fetchMenu.drink, conta);
+  }
+  conta *= 1.1;
+  return conta.toFixed(2);
+};
+
+const createMenu = (entrada) => {
+  restaurant.fetchMenu = entrada;
+  restaurant.consumption = [];
+  restaurant.order = orderFromMenu;
+  restaurant.pay = pagamento;
+  return restaurant;
+};
 
 module.exports = createMenu;

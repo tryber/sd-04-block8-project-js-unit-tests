@@ -33,12 +33,24 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
-    // ESCREVA SEUS TESTES ABAIXO:
+
     // Teste que o retorno da função é um array.
+    assert.strictEqual(Array.isArray(productDetails('gel', 'peruca')), true, 'Not array');
+
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(productDetails('gel', 'peruca').length, 2, 'Not have 2 elements');
+
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.deepStrictEqual(typeof productDetails('gel', 'peruca')[0], 'object', 'Object in index 0 not detected');
+    assert.deepStrictEqual(typeof productDetails('gel', 'peruca')[1], 'object', 'Object in index 1 not detected');
+
     // Teste que os dois objetos são diferentes entre si.
+    assert.deepStrictEqual(productDetails('gel', 'peruca')[0] !== productDetails('gel', 'peruca')[1], true, 'They are equal');
+
     // (Difícil) Teste que os dois productIds terminam com 123.
+    const auxiliar1 = productDetails('gel', 'peruca')[0].details.productId;
+    const auxiliar2 = productDetails('gel', 'peruca')[1].details.productId;
+    assert.deepStrictEqual(auxiliar1.endsWith('123'), true, 'Input name1 not end with 123');
+    assert.deepStrictEqual(auxiliar2.endsWith('123'), true, 'Input name2 not end with 123');
   });
 });

@@ -9,7 +9,8 @@ const calculator = require('../src/objCalculator');
     - mult;
     - div;
     - sub.
-  Para cada uma delas atribua uma função que realiza a respectiva operação. A função deve receber dois inteiros e retornar um inteiro. Os resultados das divisões devem sempre ser arredondados para baixo.
+  Para cada uma delas atribua uma função que realiza a respectiva operação.
+  A função deve receber dois inteiros e retornar um inteiro. Os resultados das divisões devem sempre ser arredondados para baixo.
 
   Faça as funções com arrow functions!
 

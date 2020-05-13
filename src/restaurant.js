@@ -73,7 +73,7 @@ const createMenu = (obj) => {
       const sumBill = bill.reduce((sum, pedido) => sum + (myRestaurant.fetchMenu.food[pedido] || myRestaurant.fetchMenu.drinks[pedido]), 0);
       return parseFloat(sumBill * 1.1).toPrecision(4);
     },
-  }
+  };
   return myRestaurant;
 };
 

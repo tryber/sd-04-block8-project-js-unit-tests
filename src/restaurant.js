@@ -59,9 +59,9 @@
 
 let myRestaurant = {};
 
-const orderFromMenu = (request) =>{
+const orderFromMenu = (request) => {
   myRestaurant.consumption.push(request);
-}
+};
 
 const createMenu = (obj) => {
   myRestaurant = {
@@ -70,11 +70,9 @@ const createMenu = (obj) => {
     order: orderFromMenu,
     pay: () => {
       const bill = myRestaurant.consumption;
-      console.log(bill)
-      const sumBill = bill.reduce((sum, pedido) => sum + (myRestaurant.fetchMenu.food[pedido] || myRestaurant.fetchMenu.drinks[pedido]), 0)
-      console.log(sumBill)
-      return parseFloat(sumBill*1.1).toPrecision(4)
-    }
+      const sumBill = bill.reduce((sum, pedido) => sum + (myRestaurant.fetchMenu.food[pedido] || myRestaurant.fetchMenu.drinks[pedido]), 0);
+      return parseFloat(sumBill * 1.1).toPrecision(4);
+    },
   }
   return myRestaurant;
 };

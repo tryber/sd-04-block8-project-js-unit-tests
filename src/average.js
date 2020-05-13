@@ -14,7 +14,7 @@
 const average = (array) => {
   if (array.length < 1) return undefined;
 
-  const isNull = array.find((number) => typeof number !== 'number');
+  const isNull = array.find(number => typeof number !== 'number');
   if (isNull) return undefined;
 
   const result = array.reduce((previous, current) => (previous + current), 0);

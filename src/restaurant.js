@@ -76,8 +76,19 @@ const createMenu = obj => {
     fetchMenu: obj,
     consumption: [],
     order: item => restaurantObj.consumption.push(item),
+    pay: () => {
+      const orderList = restaurantObj.consumption;
+      const foodList = restaurantObj.fetchMenu.food;
+      const drinkList = restaurantObj.fetchMenu.drink;
+      const newFoodDrinkList = Object.assign({}, foodList, drinkList);
+      let sumOfOrders = 0;
+      for (i = 0; i < orderList.length; i += 1) {
+        sumOfOrders += newFoodDrinkList[orderList[i]];
+      };
+      return parseFloat(parseFloat(sumOfOrders * 1.1).toPrecision(4));
+    }
   };
   return restaurantObj;
-}
+};
 
 module.exports = createMenu;

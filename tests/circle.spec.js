@@ -30,7 +30,7 @@ describe('#circle', () => {
     assert(Object.entries(circle(1).length === 3));// Teste se o objeto retornado tem 3 entradas.
     assert(circle() === undefined); // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert(circle(2).radius === 2); // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert(circle(3).area === 28.259999999999998); // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert(circle(3).area === 28.259999999999998 && circle(3).radius === 3 && circle(3).circumference === 18.84); // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    assert(parseFloat((circle(3)).area.toPrecision(4)) === 28.26); // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+    assert(parseFloat((circle(3)).area.toPrecision(4)) === 28.26 && circle(3).radius === 3 && circle(3).circumference === 18.84); // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
   });
 });

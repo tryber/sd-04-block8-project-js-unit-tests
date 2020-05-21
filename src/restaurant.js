@@ -77,7 +77,7 @@ const orderFromMenu = request => restaurant.consumption.push(request);
 
 const payOrder = () => {
   let total = 0;
-  restaurant.consumption.forEach(pedido => {
+  restaurant.consumption.forEach((pedido) => {
     if (restaurant.fetchMenu.food[pedido]) {
       total += restaurant.fetchMenu.food[pedido];
     }

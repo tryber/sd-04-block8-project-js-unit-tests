@@ -92,7 +92,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order("coxinha");
     // objetoRetornado.comsuption // Retorno: ["coxinha"]
     // ```
-    const objetoRetornado = createMenu({
+    let objetoRetornado = createMenu({
       food: { 'coxinha': 3.90, 'sanduiche': 9.90, 'sashimi': 15.20, 'sopa': 20.50 },
       drinks: { 'agua': 3.90, 'cerveja': 6.90 }
     });

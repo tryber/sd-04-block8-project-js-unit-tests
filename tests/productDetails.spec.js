@@ -1,8 +1,8 @@
 /* eslint-disable max-len*/
 /* eslint-disable no-unused-vars */
 
-const assert = require('assert');
-const productDetails = require('../src/productDetails');
+const assert = require("assert");
+const productDetails = require("../src/productDetails");
 
 /*
   Dadas duas strings que representam nomes de produtos, retorne um array contendo dois objetos com os detalhes dos respectivos produtos.
@@ -31,20 +31,17 @@ const productDetails = require('../src/productDetails');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-describe('#productDetails', () => {
-  it('tests the function has the correct behaviour', () => {
-    // ESCREVA SEUS TESTES ABAIXO:
-    var func = productDetails('teste1', 'teste2')
-    // Teste que o retorno da função é um array.
-    assert.deepStrictEqual(Array.isArray(func), true) //mas não é um objeto?
-    // Teste que o array retornado pela função contém dois itens dentro.
-    assert.ok(Object.keys(func).length === 2)
-    // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.deepStrictEqual(typeof func[0] && typeof func[1], 'object')
-    // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(func[0].name, func[1].name, 'they are the same') //tem como pegar separado?
-    // (Difícil) Teste que os dois productIds terminam com 123.
-    var id = func[0].details.productId
-    assert.deepStrictEqual(id.slice(-3) && id.slice(-3), '123', 'they are different')
+describe("#productDetails", () => {
+  it("tests the function has the correct behaviour", () => {
+    var func = productDetails("teste1", "teste2");
+    assert.deepStrictEqual(Array.isArray(func), true);
+    assert.ok(Object.keys(func).length === 2);
+    assert.deepStrictEqual(typeof func[0] && typeof func[1], "object");
+    assert.notStrictEqual(func[0].name, func[1].name, "they are the same");
+    assert.deepStrictEqual(
+      id.slice(-3) && id.slice(-3),
+      "123",
+      "they are different"
+    );
   });
 });

@@ -1,6 +1,7 @@
 /*
   Dadas duas strings que representam nomes de produtos,
   retorne um array contendo dois objetos com os detalhes dos respectivos produtos.
+  uma linha só pra enviar pro codeclimate que travou
 
   Parâmetros:
   - Uma string;

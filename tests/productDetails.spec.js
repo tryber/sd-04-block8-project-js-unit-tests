@@ -38,6 +38,7 @@ describe("#productDetails", () => {
     assert.ok(Object.keys(func).length === 2);
     assert.deepStrictEqual(typeof func[0] && typeof func[1], "object");
     assert.notStrictEqual(func[0].name, func[1].name, "they are the same");
+    const product = productDetails('Alcool gel', 'Máscara');
     assert.ok(product[0].details.productId.slice(-3) === '123');
     assert.ok(product[1].details.productId.slice(-3) === '123');
   });

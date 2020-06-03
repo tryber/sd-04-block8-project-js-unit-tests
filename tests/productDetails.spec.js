@@ -44,7 +44,8 @@ describe('#productDetails', () => {
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.ok(product[0] !== product[1]);
     // Teste que os dois objetos são diferentes entre si.
-    assert.strictEqual(product[i].details.productId.endsWith('123'), true);
+    assert.ok(product[0].details.productId.slice(-3) === '123');
+    assert.ok(product[1].details.productId.slice(-3) === '123');
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });

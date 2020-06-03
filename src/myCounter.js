@@ -8,7 +8,7 @@
   Como podemos perceber, eles vão adicionando valores ao array até sua condição de parada.
   Corrija o código abaixo para que a função retorne o array correto.
 
-  Parâmetros:
+  Parâmetros: 
   - Nenhum.
 
   Comportamento:
@@ -19,10 +19,11 @@ const myCounter = () => {
   var myArray = [];
   for (var counter = 0; counter <= 3; counter += 1) {
     myArray.push(counter);
-    for (var counter = 2; counter <= 3; counter += 1) {
-      myArray.push(counter);
+    for (var n = 0; n < 2; n += 1) {
+      myArray.push( n + 2 );
+      myArray.push(n + 2);
     }
-  }
+ }
   return myArray;
 };
 
